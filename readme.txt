@@ -1,0 +1,1 @@
+ i will add my git notes and my django codes here soon
