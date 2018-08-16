@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# __author__ = "吴道子mr.worth@qq.com"
 # coding=utf-8
 import pymysql
 
@@ -22,7 +23,7 @@ class ZbSpider(scrapy.Spider):
 	# sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8') 如遇编码问题可尝试开启此句
 	def start_requests(self):
 		# 由于部分机场坐标在openflight.rog里没有提供, 而flightaware里有, 故进行查漏补缺, 尽可能补全坐标信息
-		conn = pymysql.connect(host="122.114.69.20", port=3306, user="chutianbo", passwd="GYD161@hnlyzyxy", db="flight",
+		conn = pymysql.connect(host="", port=3306, user="", passwd="", db="flight",
 							   charset="utf8")
 		cur = conn.cursor()
 		sql_select_all_null_icao = "select icao from test_icao WHERE name=''"

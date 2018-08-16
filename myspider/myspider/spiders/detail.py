@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# __author__ = "吴道子mr.worth@qq.com"
 import pymysql
 import scrapy
 import json
@@ -28,7 +29,7 @@ class DetailSpider(scrapy.Spider):
 	def start_requests(self):
 		# 从数据库中获取分段抓取中已获得的 航班详情页url
 		# 并并将url存入list[] detailUrlList中
-		conn = pymysql.connect(host="122.114.69.20", port=3306, user="chutianbo", passwd="GYD161@hnlyzyxy", db="flight", charset="utf8")
+		conn = pymysql.connect(host="", port=3306, user="", passwd="", db="flight", charset="utf8")
 		cur = conn.cursor()
 		print("详细信息爬虫"*6)
 		sql_select_all_dateHref = "select dateHref from `test_flight` WHERE inserted=5 and idid<101"

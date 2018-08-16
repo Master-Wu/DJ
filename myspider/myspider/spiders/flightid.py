@@ -1,4 +1,5 @@
 #coding:utf-8
+# __author__ = "吴道子mr.worth@qq.com"
 import scrapy
 import pymysql
 from bs4 import BeautifulSoup
@@ -23,7 +24,7 @@ class FlightidSpider(scrapy.Spider):
     start_urls = []
 
     def start_requests(self):
-        db = pymysql.connect(host="122.114.69.20", port=3306, user="chutianbo", passwd="GYD161@hnlyzyxy", db="flight",
+        db = pymysql.connect(host="", port=3306, user="", passwd="", db="flight",
                              charset="utf8")
         cursor = db.cursor()
         cursor.execute("""select ICAO from test_icao""")

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# __author__ = "吴道子mr.worth@qq.com"
 # coding=utf-8
 import pymysql
 import scrapy
@@ -34,7 +35,7 @@ class HangbansSpider(scrapy.Spider):
 	start_urls = []
 
 	def start_requests(self):
-		conn = pymysql.connect(host="122.114.69.20", port=3306, user="chutianbo", passwd="GYD161@hnlyzyxy", db="flight",
+		conn = pymysql.connect(host="", port=3306, user="", passwd="", db="flight",
 							   charset="utf8")
 		cur = conn.cursor()
 		sql_select_all_plane = "select flightid from test_flightnum"

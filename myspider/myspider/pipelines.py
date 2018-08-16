@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# __author__ = "吴道子mr.worth@qq.com"
 
 # Define your item pipelines here
 #
@@ -17,10 +18,10 @@ class MysqlPipeline2(object):
 	def process_item(self,item,spider):
 		if spider.name=="detail":
 			self.connect = pymysql.connect(
-				host='122.114.69.20',
+				host='127.0.0.1',
 				port=3306,
-				user='chutianbo',
-				passwd='GYD161@hnlyzyxy',
+				user='hahaha',
+				passwd='741741',
 				db='flight',
 				charset="utf8",
 				use_unicode=True
@@ -47,10 +48,10 @@ class MysqlPipeline2(object):
 
 		if spider.name=="hangbans":
 			self.connect = pymysql.connect(
-				host='122.114.69.20',
+				host='',
 				port=3306,
-				user='chutianbo',
-				passwd='GYD161@hnlyzyxy',
+				user='',
+				passwd='',
 				db='flight',
 				charset="utf8",
 				use_unicode=True
@@ -69,10 +70,10 @@ class MysqlPipeline2(object):
 		if spider.name=="zb":
 			print("缺失坐标爬取")
 			self.connect = pymysql.connect(
-				host='122.114.69.20',
+				host='',
 				port=3306,
-				user='chutianbo',
-				passwd='GYD161@hnlyzyxy',
+				user='',
+				passwd='',
 				db='flight',
 				charset="utf8",
 				use_unicode=True
